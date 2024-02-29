@@ -2,7 +2,9 @@
     "name": "infero-syntax",
     "displayName": "Infero Syntax",
     "description": "Syntax highlighting for Infero language, CMPE 458 2024",
+    "publisher": "gregk",
     "version": "0.0.1",
+    "repository": "https://github.com/gregk27/Infero-Syntax",
     "engines": {
         "vscode": "^1.46.0"
     },
