@@ -1,0 +1,153 @@
+{
+  "fileTypes": [
+    "pt"
+  ],
+  "name": "infero",
+  "patterns": [
+    {
+      "include": "#main"
+    }
+  ],
+  "scopeName": "source.infero",
+  "uuid": "9b8ee528-bc72-4c6c-95cf-eea17703acff",
+  "repository": {
+    "main": {
+      "patterns": [
+        {
+          "match": "(and|not|then|else|of|end|file|var|if|while|repeat|choose|elseif|fun|is|typeof|pkg|public|using|val|when)",
+          "name": "keyword.infero"
+        },
+        {
+          "match": "(\\b[a-z][a-z0-9]*)",
+          "name": "Name.infero"
+        },
+        {
+          "include": "#numeric"
+        },
+        {
+          "begin": "(\\{)",
+          "beginCaptures": {
+            "1": {
+              "name": "punctuation.infero"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#main__1"
+            }
+          ],
+          "end": "(\\})",
+          "endCaptures": {
+            "1": {
+              "name": "punctuation.infero"
+            }
+          }
+        },
+        {
+          "match": "(;|,)",
+          "name": "text.infero"
+        },
+        {
+          "begin": "(\\\")",
+          "beginCaptures": {
+            "1": {
+              "name": "string.infero"
+            }
+          },
+          "contentName": "string.infero",
+          "end": "(\\\")",
+          "endCaptures": {
+            "1": {
+              "name": "string.infero"
+            }
+          }
+        },
+        {
+          "begin": "(\\()",
+          "beginCaptures": {
+            "1": {
+              "name": "punctuation.infero"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#main__3"
+            }
+          ],
+          "end": "(\\))",
+          "endCaptures": {
+            "1": {
+              "name": "punctuation.infero"
+            }
+          }
+        },
+        {
+          "include": "#multi_line_comment"
+        },
+        {
+          "match": "(//.*)",
+          "name": "comment.infero"
+        },
+        {
+          "match": "([^\\s])",
+          "name": "invalid.infero"
+        }
+      ]
+    },
+    "main__1": {
+      "patterns": [
+        {
+          "include": "#main"
+        }
+      ]
+    },
+    "main__2": {
+      "patterns": []
+    },
+    "main__3": {
+      "patterns": [
+        {
+          "include": "#numeric"
+        },
+        {
+          "match": "(,)",
+          "name": "punctuation.infero"
+        }
+      ]
+    },
+    "multi_line_comment": {
+      "patterns": [
+        {
+          "begin": "(/\\*)",
+          "beginCaptures": {
+            "1": {
+              "name": "comment.infero"
+            }
+          },
+          "contentName": "comment.infero",
+          "end": "(\\*/)",
+          "endCaptures": {
+            "1": {
+              "name": "comment.infero"
+            }
+          }
+        }
+      ]
+    },
+    "multi_line_comment__1": {
+      "patterns": []
+    },
+    "numeric": {
+      "patterns": [
+        {
+          "match": "(\\b\\d+)",
+          "name": "constant.numeric.infero"
+        },
+        {
+          "match": "(\\+|-|\\*|/|%|#|\\||\\|\\||\\+=|-=|\\*=|/=|%=|==|!=|=)",
+          "name": "keyword.operator.infero"
+        }
+      ]
+    }
+  }
+}

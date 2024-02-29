@@ -1,0 +1,25 @@
+{
+    "name": "infero-syntax",
+    "displayName": "Infero Syntax",
+    "description": "Syntax highlighting for Infero language, CMPE 458 2024",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.46.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "infero",
+            "aliases": ["Infero", "infero"],
+            "extensions": [".pt"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "infero",
+            "scopeName": "source.infero",
+            "path": "./syntaxes/infero.tmLanguage.json"
+        }]
+    }
+}
