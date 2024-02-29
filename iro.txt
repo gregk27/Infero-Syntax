@@ -27,7 +27,7 @@ file_extensions []     = pt;
 ## Keywords
 __KEYWORDS \= (and|not|then|else|of|end|file|var|if|while|repeat|choose|elseif|fun|is|typeof|pkg|public|using|val|when)
 
-__OPERATORS \= (\+|-|\*|/|%|#|\||\|\||\+=|-=|\*=|/=|%=|==|!=|=)
+__OPERATORS \= (\+|-|\*|/|%|#|\||\|\||\+=|-=|\*=|/=|%=|==|!=|=|>|<|>=|<=)
 
 ################################################################
 ## Constants
